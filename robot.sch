@@ -29,11 +29,6 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:MCKPM-G1201A-K4037
-LIBS:AMS1117-3V3
-LIBS:arduino
-LIBS:misc
-LIBS:motor
-LIBS:mpu-6050
 LIBS:robot-cache
 EELAYER 25 0
 EELAYER END
@@ -73,8 +68,6 @@ F 3 "" H 4950 4350 50  0000 C CNN
 $EndComp
 Wire Wire Line
 	7350 3200 7350 3400
-Wire Wire Line
-	8050 2800 8050 5600
 Wire Wire Line
 	8050 2800 8800 2800
 $Comp
@@ -390,7 +383,6 @@ F 3 "" H 8800 3000 50  0000 C CNN
 	1    8800 3000
 	0    1    1    0   
 $EndComp
-Connection ~ 8050 5400
 $Comp
 L GND #PWR08
 U 1 1 5B574419
@@ -415,8 +407,6 @@ F 3 "" H 1750 5300 50  0000 C CNN
 $EndComp
 Wire Wire Line
 	1900 4800 3350 4800
-Wire Wire Line
-	3350 3350 3350 5300
 Wire Wire Line
 	3350 5300 3200 5300
 $Comp
@@ -456,7 +446,7 @@ $EndComp
 Wire Wire Line
 	2450 2600 2450 2450
 Connection ~ 2450 2450
-Text GLabel 4150 5600 0    60   Input ~ 0
+Text GLabel 4150 5250 0    60   Input ~ 0
 Vin
 Text GLabel 3200 5350 2    60   Input ~ 0
 Vin
@@ -506,16 +496,14 @@ Connection ~ 1200 5500
 $Comp
 L GND #PWR010
 U 1 1 5B5B63B8
-P 4150 5250
-F 0 "#PWR010" H 4150 5000 50  0001 C CNN
-F 1 "GND" H 4150 5100 50  0000 C CNN
-F 2 "" H 4150 5250 50  0000 C CNN
-F 3 "" H 4150 5250 50  0000 C CNN
-	1    4150 5250
+P 4150 5350
+F 0 "#PWR010" H 4150 5100 50  0001 C CNN
+F 1 "GND" H 4150 5200 50  0000 C CNN
+F 2 "" H 4150 5350 50  0000 C CNN
+F 3 "" H 4150 5350 50  0000 C CNN
+	1    4150 5350
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	8050 5600 5300 5600
 $Comp
 L GND #PWR011
 U 1 1 5B5B64E5
@@ -541,8 +529,6 @@ F 6 "LM1117" H 4250 3300 61  0001 C CNN "MPN"
 	1    3950 3350
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3350 3350 3650 3350
 Connection ~ 3350 4800
 $Comp
 L GND #PWR012
@@ -605,4 +591,21 @@ F 3 "" H 5100 5650 50  0000 C CNN
 	1    5100 5650
 	-1   0    0    1   
 $EndComp
+Wire Wire Line
+	3350 4800 3350 5300
+Wire Wire Line
+	6100 4950 3550 4950
+Wire Wire Line
+	3550 4950 3550 3350
+Connection ~ 3550 3350
+Wire Wire Line
+	3550 3350 3650 3350
+Wire Wire Line
+	5300 5300 8050 5300
+Connection ~ 8050 5300
+Wire Wire Line
+	6100 4950 6100 5300
+Connection ~ 6100 5300
+Wire Wire Line
+	8050 5300 8050 2800
 $EndSCHEMATC
