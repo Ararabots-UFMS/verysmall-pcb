@@ -28,7 +28,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:MCKPM-G1201A-K4037
 LIBS:robot-cache
 EELAYER 25 0
 EELAYER END
@@ -68,8 +67,6 @@ F 3 "" H 4950 4350 50  0000 C CNN
 $EndComp
 Wire Wire Line
 	7350 3200 7350 3400
-Wire Wire Line
-	8050 2800 8050 5600
 Wire Wire Line
 	8050 2800 8800 2800
 $Comp
@@ -131,8 +128,6 @@ F 3 "" H 3550 2050 50  0000 C CNN
 	1    3550 2050
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	1200 2450 2550 2450
 $Comp
 L CONN_01X02 Bat1
 U 1 1 5B5607D4
@@ -289,24 +284,18 @@ F 3 "" H 2350 3750 50  0000 C CNN
 	1    2350 3750
 	0    1    1    0   
 $EndComp
-Text GLabel 6800 2900 2    60   Input ~ 0
+Text GLabel 4950 3250 0    60   Input ~ 0
 PWMB
-Text GLabel 6800 3500 2    60   Input ~ 0
+Text GLabel 4950 3650 0    60   Input ~ 0
 BIN1
-Text GLabel 6800 3300 2    60   Input ~ 0
+Text GLabel 4950 3450 0    60   Input ~ 0
 BIN2
-Text GLabel 6800 3700 2    60   Input ~ 0
+Text GLabel 4950 3850 0    60   Input ~ 0
 AIN1
-Text GLabel 6800 3900 2    60   Input ~ 0
+Text GLabel 4950 4050 0    60   Input ~ 0
 AIN2
-Text GLabel 6800 4100 2    60   Input ~ 0
+Text GLabel 4950 4250 0    60   Input ~ 0
 PWMA
-Wire Wire Line
-	2550 2450 2550 1800
-Wire Wire Line
-	2550 1800 7900 1800
-Wire Wire Line
-	7900 1800 7900 2900
 Wire Wire Line
 	7900 2900 8800 2900
 Text GLabel 2500 3750 2    60   Input ~ 0
@@ -315,18 +304,18 @@ Wire Wire Line
 	1900 4800 1900 4650
 Text GLabel 4250 2050 2    60   Input ~ 0
 LED
-Text GLabel 4950 3450 0    60   Input ~ 0
+Text GLabel 6800 3000 2    60   Input ~ 0
 LED
-Text GLabel 4950 3550 0    60   Input ~ 0
+Text GLabel 6800 3500 2    60   Input ~ 0
 BUZZER
-Text GLabel 4950 4050 0    60   Input ~ 0
+Text GLabel 6800 3900 2    60   Input ~ 0
 SDA
-Text GLabel 4950 3950 0    60   Input ~ 0
+Text GLabel 6800 3700 2    60   Input ~ 0
 SCL
-Text GLabel 4950 4150 0    60   Input ~ 0
+Text GLabel 6800 4100 2    60   Input ~ 0
 INT
 Wire Wire Line
-	7900 2200 10600 2200
+	4400 2200 10600 2200
 Wire Wire Line
 	10600 2200 10600 3100
 Wire Wire Line
@@ -385,7 +374,6 @@ F 3 "" H 8800 3000 50  0000 C CNN
 	1    8800 3000
 	0    1    1    0   
 $EndComp
-Connection ~ 8050 5400
 $Comp
 L GND #PWR08
 U 1 1 5B574419
@@ -408,8 +396,6 @@ F 3 "" H 1750 5300 50  0000 C CNN
 	1    1750 5300
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	1900 4800 3350 4800
 Wire Wire Line
 	3350 5300 3200 5300
 $Comp
@@ -449,7 +435,7 @@ $EndComp
 Wire Wire Line
 	2450 2600 2450 2450
 Connection ~ 2450 2450
-Text GLabel 4150 5600 0    60   Input ~ 0
+Text GLabel 4050 5700 0    60   Input ~ 0
 Vin
 Text GLabel 3200 5350 2    60   Input ~ 0
 Vin
@@ -461,7 +447,7 @@ U 1 1 5B5A116F
 P 1950 5800
 F 0 "C2" H 1960 5870 50  0000 L CNN
 F 1 "100nF" H 1960 5720 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Disc_D3_P2.5" H 1950 5800 50  0001 C CNN
+F 2 "Capacitors_ThroughHole:C_Radial_D5_L11_P2.5" H 1950 5800 50  0001 C CNN
 F 3 "" H 1950 5800 50  0000 C CNN
 	1    1950 5800
 	0    1    1    0   
@@ -499,25 +485,23 @@ Connection ~ 1200 5500
 $Comp
 L GND #PWR010
 U 1 1 5B5B63B8
-P 4150 5250
-F 0 "#PWR010" H 4150 5000 50  0001 C CNN
-F 1 "GND" H 4150 5100 50  0000 C CNN
-F 2 "" H 4150 5250 50  0000 C CNN
-F 3 "" H 4150 5250 50  0000 C CNN
-	1    4150 5250
+P 4050 5200
+F 0 "#PWR010" H 4050 4950 50  0001 C CNN
+F 1 "GND" H 4050 5050 50  0000 C CNN
+F 2 "" H 4050 5200 50  0000 C CNN
+F 3 "" H 4050 5200 50  0000 C CNN
+	1    4050 5200
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	8050 5600 5300 5600
 $Comp
 L GND #PWR011
 U 1 1 5B5B64E5
-P 5300 5200
-F 0 "#PWR011" H 5300 4950 50  0001 C CNN
-F 1 "GND" H 5300 5050 50  0000 C CNN
-F 2 "" H 5300 5200 50  0000 C CNN
-F 3 "" H 5300 5200 50  0000 C CNN
-	1    5300 5200
+P 5500 5300
+F 0 "#PWR011" H 5500 5050 50  0001 C CNN
+F 1 "GND" H 5500 5150 50  0000 C CNN
+F 2 "" H 5500 5300 50  0000 C CNN
+F 3 "" H 5500 5300 50  0000 C CNN
+	1    5500 5300
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -534,7 +518,6 @@ F 6 "LM1117" H 4250 3300 61  0001 C CNN "MPN"
 	1    3950 3350
 	1    0    0    -1  
 $EndComp
-Connection ~ 3350 4800
 $Comp
 L GND #PWR012
 U 1 1 5B5B7169
@@ -547,9 +530,9 @@ F 3 "" H 3950 3650 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4250 3350 4400 3350
+	4400 3350 4250 3350
 Wire Wire Line
-	4400 3350 4400 3050
+	4400 2200 4400 3350
 Wire Wire Line
 	4400 3050 4950 3050
 $Comp
@@ -597,15 +580,74 @@ F 3 "" H 5100 5650 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	3350 4800 3350 5300
-Wire Wire Line
-	6100 5600 6100 4950
-Wire Wire Line
-	6100 4950 3550 4950
-Wire Wire Line
 	3550 4950 3550 3350
 Connection ~ 3550 3350
-Connection ~ 6100 5600
 Wire Wire Line
 	3550 3350 3650 3350
+Connection ~ 8050 5300
+Connection ~ 6100 5300
+Wire Wire Line
+	8050 5300 8050 2800
+Wire Wire Line
+	6100 5700 5300 5700
+Wire Wire Line
+	6100 5300 8050 5300
+$Comp
+L CP1 C4
+U 1 1 5B69B226
+P 5450 5550
+F 0 "C4" H 5475 5650 50  0000 L CNN
+F 1 "10uF" H 5475 5450 50  0000 L CNN
+F 2 "Capacitors_ThroughHole:C_Radial_D5_L11_P2.5" H 5450 5550 50  0001 C CNN
+F 3 "" H 5450 5550 50  0000 C CNN
+	1    5450 5550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5300 5300 5500 5300
+Wire Wire Line
+	5450 5400 5450 5300
+Connection ~ 5450 5300
+$Comp
+L CP1 C3
+U 1 1 5B69B70A
+P 3800 5450
+F 0 "C3" H 3825 5550 50  0000 L CNN
+F 1 "100uF" H 3825 5350 50  0000 L CNN
+F 2 "Capacitors_ThroughHole:C_Radial_D5_L11_P2.5" H 3800 5450 50  0001 C CNN
+F 3 "" H 3800 5450 50  0000 C CNN
+	1    3800 5450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4150 5300 3800 5300
+Wire Wire Line
+	4150 5200 4150 5300
+Wire Wire Line
+	4050 5200 4150 5200
+Connection ~ 4150 5250
+Wire Wire Line
+	4150 5600 3800 5600
+Wire Wire Line
+	4050 5700 4100 5700
+Wire Wire Line
+	4100 5700 4100 5600
+Connection ~ 4100 5600
+Wire Wire Line
+	5500 5700 5450 5700
+Connection ~ 5450 5700
+Connection ~ 5500 5700
+Connection ~ 4400 3050
+Wire Wire Line
+	7900 2900 7900 2200
+Wire Wire Line
+	2450 2450 1200 2450
+Wire Wire Line
+	6100 5300 6100 5700
+Wire Wire Line
+	3550 4950 1200 4950
+Connection ~ 1200 4950
+Wire Wire Line
+	1900 4800 1200 4800
+Connection ~ 1200 4800
 $EndSCHEMATC
