@@ -4950,19 +4950,20 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <sheets>
 <sheet>
 <plain>
-<rectangle x1="-81.28" y1="-22.86" x2="-45.72" y2="7.62" layer="90"/>
-<text x="-81.28" y="10.16" size="1.778" layer="90">Leitura tensao bateria</text>
+<text x="-114.3" y="109.22" size="1.778" layer="91">Divisor tensao
+para leitura da 
+bateria</text>
 </plain>
 <instances>
 <instance part="U1" gate="G$1" x="-10.16" y="76.2"/>
-<instance part="U2" gate="G$1" x="68.58" y="104.14" rot="R180"/>
-<instance part="IC1" gate="A" x="71.12" y="66.04"/>
-<instance part="SUPPLY1" gate="GND" x="50.8" y="106.68" rot="R270"/>
-<instance part="SUPPLY2" gate="GND" x="71.12" y="55.88"/>
-<instance part="R1" gate="G$1" x="-76.2" y="0" rot="R90"/>
-<instance part="R2" gate="G$1" x="-71.12" y="-12.7" rot="R180"/>
-<instance part="R3" gate="G$1" x="-60.96" y="-12.7" rot="R180"/>
-<instance part="SUPPLY3" gate="GND" x="-53.34" y="-15.24"/>
+<instance part="U2" gate="G$1" x="-101.6" y="63.5"/>
+<instance part="IC1" gate="A" x="-104.14" y="35.56"/>
+<instance part="SUPPLY1" gate="GND" x="-83.82" y="60.96" rot="R90"/>
+<instance part="SUPPLY2" gate="GND" x="-104.14" y="25.4"/>
+<instance part="R1" gate="G$1" x="-104.14" y="104.14"/>
+<instance part="R2" gate="G$1" x="-99.06" y="99.06" rot="R90"/>
+<instance part="R3" gate="G$1" x="-99.06" y="88.9" rot="R90"/>
+<instance part="SUPPLY3" gate="GND" x="-99.06" y="81.28"/>
 </instances>
 <busses>
 </busses>
@@ -4979,23 +4980,63 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <segment>
 <pinref part="R3" gate="G$1" pin="1"/>
 <pinref part="SUPPLY3" gate="GND" pin="GND"/>
-<wire x1="-55.88" y1="-12.7" x2="-53.34" y2="-12.7" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$1" class="0">
+<net name="V_OUT" class="0">
+<segment>
+<pinref part="R1" gate="G$1" pin="2"/>
+<pinref part="R2" gate="G$1" pin="2"/>
+<wire x1="-99.06" y1="104.14" x2="-91.44" y2="104.14" width="0.1524" layer="91"/>
+<junction x="-99.06" y="104.14"/>
+<label x="-91.44" y="104.14" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="SENSOR_VP"/>
+<wire x1="-30.48" y1="93.98" x2="-35.56" y2="93.98" width="0.1524" layer="91"/>
+<label x="-35.56" y="93.98" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="N$2" class="0">
 <segment>
 <pinref part="R2" gate="G$1" pin="1"/>
 <pinref part="R3" gate="G$1" pin="2"/>
 </segment>
 </net>
-<net name="N$2" class="0">
+<net name="BAT_VCC" class="0">
 <segment>
-<pinref part="R2" gate="G$1" pin="2"/>
 <pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="-76.2" y1="-12.7" x2="-76.2" y2="-7.62" width="0.1524" layer="91"/>
-<wire x1="-76.2" y1="-7.62" x2="-76.2" y2="-5.08" width="0.1524" layer="91"/>
-<wire x1="-76.2" y1="-7.62" x2="-71.12" y2="-7.62" width="0.1524" layer="91"/>
-<junction x="-76.2" y="-7.62"/>
+<wire x1="-109.22" y1="104.14" x2="-114.3" y2="104.14" width="0.1524" layer="91"/>
+<label x="-114.3" y="101.6" size="1.778" layer="95" rot="R270" xref="yes"/>
+<wire x1="-114.3" y1="101.6" x2="-114.3" y2="104.14" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="A" pin="IN"/>
+<label x="-116.84" y="35.56" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="-116.84" y1="35.56" x2="-111.76" y2="35.56" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="3.3V" class="0">
+<segment>
+<pinref part="U2" gate="G$1" pin="VOUT"/>
+<wire x1="-86.36" y1="66.04" x2="-83.82" y2="66.04" width="0.1524" layer="91"/>
+<label x="-83.82" y="66.04" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="3V3"/>
+<wire x1="10.16" y1="101.6" x2="12.7" y2="101.6" width="0.1524" layer="91"/>
+<label x="12.7" y="101.6" size="1.778" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="5V" class="0">
+<segment>
+<pinref part="IC1" gate="A" pin="OUT"/>
+<wire x1="-96.52" y1="35.56" x2="-93.98" y2="35.56" width="0.1524" layer="91"/>
+<label x="-93.98" y="35.56" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="VIN"/>
+<wire x1="-116.84" y1="66.04" x2="-121.92" y2="66.04" width="0.1524" layer="91"/>
+<label x="-121.92" y="66.04" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
@@ -5004,6 +5045,10 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 </schematic>
 </drawing>
 <compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
 <note version="8.2" severity="warning">
 Since Version 8.2, EAGLE supports online libraries. The ids
 of those online libraries will not be understood (or retained)
