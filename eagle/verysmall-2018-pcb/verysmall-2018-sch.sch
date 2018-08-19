@@ -18379,7 +18379,7 @@ logico 3.3V</text>
 <instance part="RX-TX" gate="-2" x="-17.78" y="83.82" rot="R180"/>
 <instance part="SG1" gate="G$1" x="-10.16" y="12.7"/>
 <instance part="Q1" gate="G$1" x="0" y="2.54"/>
-<instance part="SUPPLY14" gate="GND" x="2.54" y="-5.08"/>
+<instance part="SUPPLY14" gate="GND" x="2.54" y="-7.62"/>
 <instance part="R5" gate="G$1" x="-7.62" y="2.54"/>
 </instances>
 <busses>
@@ -18471,6 +18471,7 @@ logico 3.3V</text>
 <segment>
 <pinref part="Q1" gate="G$1" pin="E"/>
 <pinref part="SUPPLY14" gate="GND" pin="GND"/>
+<wire x1="2.54" y1="-5.08" x2="2.54" y2="-2.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="V_OUT" class="0">
@@ -18495,12 +18496,6 @@ logico 3.3V</text>
 </net>
 <net name="BAT_VCC" class="0">
 <segment>
-<pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="-109.22" y1="104.14" x2="-114.3" y2="104.14" width="0.1524" layer="91"/>
-<label x="-114.3" y="101.6" size="1.778" layer="95" rot="R270" xref="yes"/>
-<wire x1="-114.3" y1="101.6" x2="-114.3" y2="104.14" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="IC1" gate="A" pin="IN"/>
 <label x="-116.84" y="30.48" size="1.778" layer="95" rot="R180" xref="yes"/>
 <wire x1="-116.84" y1="30.48" x2="-114.3" y2="30.48" width="0.1524" layer="91"/>
@@ -18508,7 +18503,26 @@ logico 3.3V</text>
 <wire x1="-114.3" y1="30.48" x2="-111.76" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="-114.3" y1="22.86" x2="-114.3" y2="30.48" width="0.1524" layer="91"/>
 <junction x="-114.3" y="30.48"/>
-<label x="-154.94" y="68.58" size="1.778" layer="95" rot="R90" xref="yes"/>
+<wire x1="-134.62" y1="104.14" x2="-134.62" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="-134.62" y1="71.12" x2="-134.62" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="-134.62" y1="35.56" x2="-114.3" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="-114.3" y1="35.56" x2="-114.3" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="R1" gate="G$1" pin="1"/>
+<wire x1="-109.22" y1="104.14" x2="-114.3" y2="104.14" width="0.1524" layer="91"/>
+<label x="-114.3" y="101.6" size="1.778" layer="95" rot="R270" xref="yes"/>
+<wire x1="-114.3" y1="101.6" x2="-114.3" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="-134.62" y1="104.14" x2="-114.3" y2="104.14" width="0.1524" layer="91"/>
+<junction x="-114.3" y="104.14"/>
+<pinref part="S1" gate="1" pin="O"/>
+<wire x1="-162.56" y1="68.58" x2="-162.56" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="-157.48" y1="68.58" x2="-162.56" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="-157.48" y1="68.58" x2="-157.48" y2="71.12" width="0.1524" layer="91"/>
+<junction x="-157.48" y="68.58"/>
+<pinref part="S1" gate="2" pin="O"/>
+<wire x1="-152.4" y1="63.5" x2="-152.4" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="-152.4" y1="68.58" x2="-157.48" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="-157.48" y1="71.12" x2="-134.62" y2="71.12" width="0.1524" layer="91"/>
+<junction x="-134.62" y="71.12"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="VIN+"/>
@@ -18740,16 +18754,6 @@ logico 3.3V</text>
 <junction x="-147.32" y="66.04"/>
 </segment>
 </net>
-<net name="N$7" class="0">
-<segment>
-<pinref part="S1" gate="2" pin="O"/>
-<wire x1="-152.4" y1="63.5" x2="-152.4" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="-152.4" y1="68.58" x2="-160.02" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="S1" gate="1" pin="O"/>
-<wire x1="-160.02" y1="68.58" x2="-162.56" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="-162.56" y1="68.58" x2="-162.56" y2="63.5" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$8" class="0">
 <segment>
 <pinref part="S1" gate="1" pin="P"/>
@@ -18843,6 +18847,25 @@ logico 3.3V</text>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="202,1,0,91.44,U1,EN,,,,"/>
+<approved hash="202,1,0,86.36,U1,SENSOR_VN,,,,"/>
+<approved hash="208,1,-86.36,53.34,GND,sup,,,,"/>
+<approved hash="208,1,-104.14,22.86,GND,sup,,,,"/>
+<approved hash="208,1,-99.06,83.82,GND,sup,,,,"/>
+<approved hash="208,1,40.64,45.72,GND,sup,,,,"/>
+<approved hash="208,1,-35.56,119.38,GND,sup,,,,"/>
+<approved hash="208,1,86.36,73.66,GND,sup,,,,"/>
+<approved hash="208,1,86.36,60.96,GND,sup,,,,"/>
+<approved hash="208,1,142.24,60.96,GND,sup,,,,"/>
+<approved hash="208,1,-86.36,134.62,GND,out,,,,"/>
+<approved hash="208,1,-83.82,134.62,GND,sup,,,,"/>
+<approved hash="208,1,-121.92,134.62,GND,sup,,,,"/>
+<approved hash="208,1,-48.26,2.54,GND,sup,,,,"/>
+<approved hash="208,1,-172.72,48.26,GND,sup,,,,"/>
+<approved hash="208,1,-152.4,45.72,GND,sup,,,,"/>
+<approved hash="208,1,2.54,-2.54,GND,sup,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>
