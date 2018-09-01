@@ -1,0 +1,13 @@
+G04 Gerber job file.*
+%TF.FileFunction,JobInfo*%
+%TF.GenerationSoftware,Autodesk,EAGLE,9.1.2*%
+%TF.CreationDate,2018-08-31T13:28:58Z*%
+%TF.Part,Single*%
+%MOMM*%
+%TJ.B_Owner,Wellington Castro <wellingtonvcastro@gmail.com>*%
+%TJ.B_ID,verysmall-2018-sch*%
+%TJ.B_LayerNum,2*%
+%TJ.B_Thickness,1.570000*%
+%TJ.B_Size_X,65.000000*%
+%TJ.B_Size_Y,66.000000*%
+M02*

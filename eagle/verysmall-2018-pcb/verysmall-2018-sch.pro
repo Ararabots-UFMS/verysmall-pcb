@@ -1,25 +1,25 @@
 EAGLE AutoRouter Statistics:
 
-Job           : /home/verysmall/Documentos/Git/verysmall-pcb/eagle/verysmall-2018-pcb/verysmall-2018-sch.brd
+Job           : /home/wcastro/EAGLE/projects/verysmall-2018-pcb/verysmall-2018-sch.brd
 
-Start at      : 13:47:09 (19/08/18)
-End at        : 13:47:42 (19/08/18)
-Elapsed time  : 00:00:32
+Start at      : 10:12:39 (8/29/18)
+End at        : 10:12:41 (8/29/18)
+Elapsed time  : 00:00:01
 
-Signals       :    33   RoutingGrid: 6 mil  Layers: 2
-Connections   :    54   predefined:  0 ( 0 Vias )
+Signals       :    34   RoutingGrid: 9.84252 mil  Layers: 2
+Connections   :    85   predefined:  45 ( 6 Vias )
 
-Router memory :   781820
+Router memory :   398080
 
-Passname          : TopRouter     Route Optimize1 Optimize2 Optimize3 Optimize4 Optimize5 Optimize6 Optimize7 Optimize8 Optimize9Optimize10Optimize11Optimize12
+Passname          :     Route Optimize1 Optimize2 Optimize3 Optimize4
 
-Time per pass     :  00:00:20  00:00:01  00:00:01  00:00:01  00:00:00  00:00:01  00:00:01  00:00:01  00:00:01  00:00:01  00:00:01  00:00:01  00:00:01  00:00:01
-Number of Ripups  :         0         0         0         0         0         0         0         0         0         0         0         0         0         0
-max. Level        :         0         0         0         0         0         0         0         0         0         0         0         0         0         0
-max. Total        :         0         0         0         0         0         0         0         0         0         0         0         0         0         0
+Time per pass     :  00:00:00  00:00:01  00:00:00  00:00:00  00:00:00
+Number of Ripups  :         0         0         0         0         0
+max. Level        :         0         0         0         0         0
+max. Total        :         0         0         0         0         0
 
-Routed            :        20        54        54        54        54        54        54        54        54        54        54        54        54        54
-Vias              :         0         6         5         5         5         5         5         5         6         6         6         6         6         6
-Resolution        :    37.0 %   100.0 %   100.0 %   100.0 %   100.0 %   100.0 %   100.0 %   100.0 %   100.0 %   100.0 %   100.0 %   100.0 %   100.0 %   100.0 %
+Routed            :        29        40        40        40        40
+Vias              :         4         2         2         2         1
+Resolution        :    87.1 %   100.0 %   100.0 %   100.0 %   100.0 %
 
 Final             : 100.0% finished
